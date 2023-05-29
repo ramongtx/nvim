@@ -30,6 +30,7 @@ local plugins = {
     "mbbill/undotree",
     "tpope/vim-fugitive",
     "nvim-treesitter/nvim-treesitter-context",
+    "christoomey/vim-tmux-navigator",
     {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
