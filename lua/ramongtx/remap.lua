@@ -1,28 +1,37 @@
-vim.g.mapleader = " "
-
 local kmap = vim.keymap.set
 
+-- Open explorer
 kmap("n", "<leader>pv", vim.cmd.Ex)
 
+-- Move selection with context
 kmap("v", "J", ":m '>+1<CR>gv=gv")
 kmap("v", "K", ":m '<-2<CR>gv=gv")
 
+-- Append next line to this
 kmap("n", "J", "mzJ`z")
+
+-- Scroll and recenter
 kmap("n", "<C-d>", "<C-d>zz")
 kmap("n", "<C-u>", "<C-u>zz")
+
+-- Keep cursor in the middle after seach
 kmap("n", "n", "nzzzv")
 kmap("n", "N", "Nzzzv")
 
--- next greatest remap ever : asbjornHaland
+-- Copy to OS clipboard 
 kmap({"n", "v"}, "<leader>y", [["+y]])
 kmap("n", "<leader>Y", [["+Y]])
 
+-- Delete to void
 kmap({"n", "v"}, "<leader>d", [["_d]])
 
--- This is going to get me cancelled
+-- In Insertion mode, C-c is escape
 kmap("i", "<C-c>", "<Esc>")
 
+-- Replace word under cursor
 kmap("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- Quick exit
 kmap({"i", "n", "v"}, "<C-q>", ":qa<CR>")
 kmap({"i", "n", "v"}, "<C-Q>", ":qa!<CR>")
 
