@@ -1,7 +1,7 @@
-require('rose-pine').setup({})
+require('kanagawa').setup({})
 
 function ColorMyPencils(color) 
-	color = color or "rose-pine"
+	color = color or "kanagawa"
 	vim.cmd.colorscheme(color)
 end
 
