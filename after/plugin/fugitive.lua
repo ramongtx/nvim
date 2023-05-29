@@ -1,10 +1,10 @@
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 
-local ThePrimeagen_Fugitive = vim.api.nvim_create_augroup("ThePrimeagen_Fugitive", {})
+local ramongtx_Fugitive = vim.api.nvim_create_augroup("ramongtx_Fugitive", {})
 
 local autocmd = vim.api.nvim_create_autocmd
 autocmd("BufWinEnter", {
-    group = ThePrimeagen_Fugitive,
+    group = ramongtx_Fugitive,
     pattern = "*",
     callback = function()
         if vim.bo.ft ~= "fugitive" then
@@ -15,6 +15,7 @@ autocmd("BufWinEnter", {
         local opts = {buffer = bufnr, remap = false}
         vim.keymap.set("n", "<leader>p", function()
             vim.cmd.Git('push')
+
         end, opts)
 
         -- rebase always
@@ -24,6 +25,7 @@ autocmd("BufWinEnter", {
 
         -- NOTE: It allows me to easily set the branch i am pushing and any tracking
         -- needed if i did not set the branch up correctly
+
         vim.keymap.set("n", "<leader>t", ":Git push -u origin ", opts);
     end,
 })

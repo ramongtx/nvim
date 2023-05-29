@@ -33,7 +33,7 @@ kmap("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Quick exit
 kmap({"i", "n", "v"}, "<C-q>", ":qa<CR>")
-kmap({"i", "n", "v"}, "<C-Q>", ":qa!<CR>")
+kmap({"i", "n", "v"}, "<C-S-q>", ":qa!<CR>")
 
 -- window management
 kmap("n", "<leader>sv", "<C-w>v") -- split window vertically
