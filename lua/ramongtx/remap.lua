@@ -40,3 +40,6 @@ kmap("n", "<leader>sv", "<C-w>v") -- split window vertically
 kmap("n", "<leader>sh", "<C-w>s") -- split window horizontally
 kmap("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
 kmap("n", "<leader>sx", ":close<CR>") -- close current split window
+
+-- trim whitespace
+kmap('n', '<leader>wt', [[:%s/\s\+$//e<cr>]])
