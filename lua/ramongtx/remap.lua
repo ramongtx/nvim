@@ -1,7 +1,7 @@
 local kmap = vim.keymap.set
 
 -- Open explorer
-kmap("n", "<leader>pv", vim.cmd.Ex)
+kmap("n", "<leader>pv", ":NvimTreeFocus<CR>")
 
 -- Move selection with context
 kmap("v", "J", ":m '>+1<CR>gv=gv")
