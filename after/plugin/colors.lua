@@ -1,7 +1,7 @@
-require('kanagawa').setup({})
+require('onedark').setup({})
 
 function ColorMyPencils(color) 
-	color = color or "kanagawa"
+	color = color or "onedark"
 	vim.cmd.colorscheme(color)
 end
 
