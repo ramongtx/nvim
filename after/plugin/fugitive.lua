@@ -1,4 +1,11 @@
-vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+local wk = require("which-key")
+
+wk.register({
+    ["<leader>g"] = {
+        name = "+Git",
+        s = { vim.cmd.Git, "Git status" },
+    }
+})
 
 local ramongtx_Fugitive = vim.api.nvim_create_augroup("ramongtx_Fugitive", {})
 
