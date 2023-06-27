@@ -20,6 +20,7 @@ local plugins = {
 
     -- Theme
     "ful1e5/onedark.nvim",
+    "sekke276/dark_flat.nvim",
 
     -- Language parser
     {
@@ -100,6 +101,7 @@ local plugins = {
         opts = {},
     },
 
+    -- Key mappings helper
     {
         "folke/which-key.nvim",
         event = "VeryLazy",
@@ -109,6 +111,25 @@ local plugins = {
         end,
         opts = {
         }
+    },
+
+    -- Vim commands trainer
+    {
+        "m4xshen/hardtime.nvim",
+        event = "VeryLazy",
+        opts = {
+            max_count = 10,
+            disable_mouse = false,
+            disabled_keys = {},
+        }
+    },
+
+    -- Bottom bar
+    {
+        'nvim-lualine/lualine.nvim',
+        config = function()
+            require('lualine').setup()
+        end,
     },
 }
 
