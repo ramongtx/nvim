@@ -1,4 +1,10 @@
 require('refactoring').setup({})
+local wk = require("which-key")
 
-vim.api.nvim_set_keymap("v", "<leader>ri", [[ <Esc><Cmd>lua require('refactoring').refactor('Inline Variable')<CR>]], {noremap = true, silent = true, expr = false})
+wk.register({
+    ["<leader>r"] = {
+        name = "+Refactoring",
+        i = { [[ <Esc><Cmd>lua require('refactoring').refactor('Inline Variable')<CR>]], "Inline variable" }, 
+    },
+}, { noremap = true, silent = true, expr = false })
   
