@@ -16,6 +16,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.go" },
     { import = "lazyvim.plugins.extras.coding.yanky" },
     { import = "lazyvim.plugins.extras.test.core" },
+    { import = "lazyvim.plugins.extras.dap.core" },
     -- import/override with your plugins
     { import = "plugins" },
   },
