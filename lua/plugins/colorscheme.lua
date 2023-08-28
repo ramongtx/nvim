@@ -1,12 +1,12 @@
 return {
   -- add nordic
-  { "AlexvZyl/nordic.nvim" },
+  { "sainnhe/sonokai" },
 
   -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "nordic",
+      colorscheme = "sonokai",
     },
   },
 }
